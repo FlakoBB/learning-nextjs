@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div id="app"></div>
+        <!-- imperative programming -->
+        <!-- In other words, imperative programming is like giving a chef step-by-step instructions on how to make a pizza. Declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza. 🍕 -->
+        <script type="text/javascript">
+            // select de div with 'app' id
+            const app = document.getElementById('app')
+
+            // create new element 'h1'
+            const header = document.createElement('h1')
+
+            // create new Textnode for de h1 element
+            const headerContent = document.createTextNode('Develop. Preview. Ship.')
+
+            // append the txt to the h1 element
+            header.appendChild(headerContent)
+
+            // place the h1 element inside the div
+            app.appendChild(header)
+        </script>
+    </body>
+</html>
