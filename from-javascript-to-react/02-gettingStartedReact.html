@@ -1,0 +1,29 @@
+<!-- ? Getting started with React -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gettin Started With React</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- * Dependencias de React (React - React-DOM) -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- * Babel -->
+  <!-- Compilador de JS. Transforma el codigo JSX a JS regular -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Declarative Programming -->
+  <!-- Declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza. 🍕 -->
+  <script type="text/jsx">
+    const app = document.getElementById('app')
+
+    ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app)
+  </script>
+</body>
+</html>

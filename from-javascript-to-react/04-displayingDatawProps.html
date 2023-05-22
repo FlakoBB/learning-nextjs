@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Displaying Data With Props</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- ? Using Props -->
+  <!-- Los props son propiedades que se le pasan a un componente de react como atributos de un elemento HTML y atributos de una funcion de JS -->
+  <!-- Los props son objetos y podemos usar la destructuracion de objetyos para acceder a sus propiedades más facil -->
+  <script type="text/jsx">
+    const app = document.getElementById('app')
+
+    // function Header(props) {
+    // console.log(props) // props es un objeto con la propiedad 'title'
+    function Header({ title }) {
+      console.log(title) // * con la destructuracion de objetos accedemos directo a las propiedades de props
+
+      return <h1>{title ? title : 'Default Tilte'}</h1>
+    }
+
+    function HomePage() {
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+      return (
+        <div>
+          <Header title="React <3" />
+          <Header title="React <4" />
+          <ul>
+            {
+              names.map(name => (
+                <li key={ name }>{ name }</li>
+              ))
+            }
+          </ul>
+        </div>
+      )
+    }
+
+    ReactDOM.render(<HomePage />, app)
+  </script>
+</body>
+</html>
